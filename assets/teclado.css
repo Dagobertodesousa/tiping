@@ -1,0 +1,435 @@
+*
+{
+    color: #fff;
+    font-size: 12pt;
+}
+:root
+{
+    --bg--clr--blk: #454;
+    --bg--clr--lgh: #dde;
+}
+
+body
+{
+    margin: 0;
+    background-color: var(--bg--clr--blk);
+    width: 100vw;
+    height: 100vh;
+}
+
+main
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1900px;
+    max-height: 1080px;
+}
+
+main section.left,
+main section.center,
+main section.right
+{
+    justify-content: space-around;
+    align-items: center;
+    height: 30vh;
+}
+
+main section.left
+{
+    width: 60vw;
+}
+main section.center
+{
+    margin-left: 5px;
+    margin-right: 10px;
+    width: 100px;
+}
+main section.right
+{
+    width: 210px;
+}
+
+main section.left .tcl-function,
+main section.left .tcl-numerals,
+main section.left .tcl-alphabet
+{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: 60vw;
+    height: 5vh;
+    margin: 2px;
+} 
+
+main section.left .tcl-function,
+main section.left .tcl-numerals,
+main section.left .tcl-alphabet,
+main section.right .num-function,
+main section.center .pg-function .block--button
+{
+    background-color: #000;
+}
+
+main section.center .pg-function
+{
+    display: flexbox;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    width: 10vw;
+    height: 5vh;
+    margin: 2px;
+}
+
+main section.center .pg-function .block--button
+{
+    display: flex;
+    max-width: 100px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2px;
+}
+
+
+main section.right .num-function
+{
+    display: grid;
+    grid-template-areas: 
+        ". . PrintScreen ScrollLock"
+        "NumLock NumpadDivide NumpadMultiply NumpadSubtract"
+        "Numpad7 Numpad8 Numpad9 NumpadAdd"
+        "Numpad4 Numpad5 Numpad6 NumpadComma"
+        "Numpad1 Numpad2 Numpad3 NumpadEnter"
+        "Numpad0 Numpad0 NumpadDecimal NumpadEnter";
+    text-align: center;
+    gap: 2px;
+    max-width: 210px;
+    margin: 2px;
+}
+
+div.pointWrite
+{
+    display: block;
+    position: absolute;
+    border: 1px solid red;
+    background-color: #fff;
+    animation: open normal 100ms;
+}
+
+@keyframes open {
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    30%{
+        width: 5px;
+        height: 5px;
+    }
+    65%{
+        width: 10px;
+        height: 10px;
+    }
+    100%{
+        width: 18px;
+        height: 18px;
+    }
+}
+
+div.pointBlack
+{
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border: 1px solid yellow;
+    background-color: #000;
+    border-radius: 2px;
+}
+
+main section.right .num-function .button--stand.Numpad0
+{
+    grid-area: Numpad0;
+}
+main section.right .num-function .button--stand.Numpad1
+{
+    grid-area: Numpad1;
+}
+main section.right .num-function .button--stand.Numpad2
+{
+    grid-area: Numpad2;
+}
+main section.right .num-function .button--stand.Numpad3
+{
+    grid-area: Numpad3;
+}
+main section.right .num-function .button--stand.Numpad4
+{
+    grid-area: Numpad4;
+}
+main section.right .num-function .button--stand.Numpad5
+{
+    grid-area: Numpad5;
+}
+main section.right .num-function .button--stand.Numpad6
+{
+    grid-area: Numpad6;
+}
+main section.right .num-function .button--stand.Numpad7
+{
+    grid-area: Numpad7;
+}
+main section.right .num-function .button--stand.Numpad8
+{
+    grid-area: Numpad8;
+}
+main section.right .num-function .button--stand.Numpad9
+{
+    grid-area: Numpad9;
+}
+main section.right .num-function .button--stand.PrintScreen
+{
+    grid-area: PrintScreen;
+}
+main section.right .num-function .button--stand.ScrollLock
+{
+    grid-area: ScrollLock;
+}
+main section.right .num-function .button--stand.NumpadComma
+{
+    grid-area: NumpadComma;
+}
+main section.right .num-function .button--stand.NumpadDecimal
+{
+    grid-area: NumpadDecimal;
+}
+main section.right .num-function .button--stand.NumpadEnter
+{
+    grid-area: NumpadEnter;
+}
+main section.right .num-function .button--stand.NumpadAdd
+{
+    grid-area: NumpadAdd;
+}
+main section.right .num-function .button--stand.NumpadMultiply
+{
+    grid-area: NumpadMultiply;
+}
+main section.right .num-function .button--stand.NumpadDivide
+{
+    grid-area: NumpadDivide;
+}
+main section.right .num-function .button--stand.NumpadSubtract
+{
+    grid-area: NumpadSubtract;
+}
+main section.right .num-function .button--stand.NumLock
+{
+    grid-area: NumLock;
+}
+
+main section.tcl-function .block--button,
+main section.tcl-numerals .block--button,
+main section.tcl-alphabet .block--button
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block--button .button--stand,
+.block--button .button--stand--mult,
+section.right .num-function .button--stand
+{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-width: 40px;
+    min-height: 4vh;
+    border-radius: 5px;
+    border-color: #000;
+    border-style: solid;
+    border-width: 2px;
+    margin: 1px 2px 1px 2px;
+    box-shadow: 2px 2px 0px 1px #999;
+}
+
+.block--button .button--stand--mult
+{
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+    grid-template-areas:
+        "qd2 qd4"
+        "qd1 qd3";
+}
+.button--stand--mult nav.qd1
+{
+    grid-area: qd1;
+    display: flex;
+    justify-content: center;
+    font-size: 12pt;
+    width: 40%;
+}
+.button--stand--mult nav.qd2
+{
+    grid-area: qd2;
+    display: flex;
+    justify-content: center;
+    font-size: 10pt;
+    width: 40%;
+}
+.button--stand--mult nav.qd3
+{
+    grid-area: qd3;
+    display: flex;
+    justify-content: center;
+    font-size: 7pt;
+    width: 60%;
+}
+.button--stand--mult nav.qd4
+{
+    grid-area: qd4;
+    display: flex;
+    justify-content: center;
+    font-size: 6pt;
+    width: 60%;
+}
+section.right .num-function .button--stand
+{
+    display: grid;
+    grid-template-areas:
+        "qd1"
+        "qd2";
+}
+
+section.right .num-function .button--stand.zero
+{
+    width: 90px;
+}
+section.right .num-function .button--stand.enter
+{
+    width: 40px;
+    height: 10vh;
+}
+
+section.right .num-function .button--stand nav.qd1
+{
+    text-align: center;
+    grid-area: qd1;
+}
+
+section.right .num-function .button--stand nav.qd2
+{
+    font-size: 10pt;
+    text-align: center;
+    grid-area: qd2;
+}
+
+.block--button .button--stand:hover,
+.block--button .button--stand--mult:hover,
+section.right .num-function .button--stand:hover
+{
+    font-weight: 900;
+    color: #dde;
+    background-color: darksalmon;
+    box-shadow: 0px 0px 20px 4px #f4a;
+    cursor: pointer;
+}
+.block--button .button--stand.ag
+{
+    width: 8%;
+}
+.block--button .button--stand.wkey
+{
+    width: 8%;
+}
+.block--button .button--stand.capsl
+{
+    width: 10%;
+}
+.block--button .button--stand.bcsk
+{
+    width: 14%;
+}
+.block--button .button--stand.enter
+{
+    width: 13%;
+}
+.block--button .button--stand.shift
+{
+    width: 7%;
+}
+.block--button .button--stand.ctrl
+{
+    width: 10%;
+}
+.block--button .button--stand.ctrl
+{
+    width: 10%;
+}
+
+.block--button .button--stand.space
+{
+    width: 40%;
+}
+
+main section.left .tcl-function .button--stand--spc
+{
+    display: block;
+    width: 25px;
+    height: 4vh;
+}
+
+main section.center .pg-function .button--stand--spc
+{
+    display: block;
+    width: 100%;
+    height: 5vh;
+}
+main section.right .num-function .button--stand--spc
+{
+    display: block;
+    width: 50%;
+    height: 5vh;
+}
+
+main section.center .pg-function .button--stand
+{
+    text-align: center;
+    font-size: 10pt;
+}
+
+.blue
+{
+    background-color: aquamarine;
+}
+
+.orange
+{
+    background-color: orange;
+}
+
+@media (max-height: 720px) {
+    main
+    {
+        max-width: 1200px;
+        max-height: 720px;
+    }
+}
+
+@media (max-height: 1080px) {
+    main
+    {
+        max-width: 1900px;
+        max-height: 1080px;
+    }
+}
+
+@media (max-height: 1900px) {
+    main
+    {
+        max-width: 2560px;
+        max-height: 1900px;
+    }
+}
